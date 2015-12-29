@@ -1,0 +1,271 @@
+.mtm-component {
+	padding: 2em 0;
+
+	&:nth-of-type(2n) {
+		background-color: darken($Nlightest, .4%);
+	}
+
+	.content--page {
+		padding-top: 6em !important;
+    	margin-top: -6em !important;
+	}
+}
+
+// Home
+
+.mtm-component--home {
+	overflow:hidden;
+	position:relative;
+	min-height:600px;
+	background-color:darken($Ndarkest, 10%);
+	padding-top: 1em;
+
+	h1 {
+		text-align:center;
+		color:$Nlightest;
+		margin-top:1em;
+		margin-bottom:.5em;
+	}
+
+	p {
+		color: $Nlightest;
+		font-size:1.2em;
+		text-align:center;
+	}
+
+}
+
+	.mtm-home-buttons {
+		width:inherit;
+		text-align:center;
+		margin:1em auto 0;
+
+		.button {
+			border:1px solid $springColor1;
+			background-color: rgba(222,30,126,0.1);
+			background-image:none;
+			@include transition(all 0.2s ease);
+			margin-top:.5em;
+			margin-right:1em;
+			margin-left:1em;
+			font-size:1.2em;
+			line-height:1;
+
+			&:hover, &:focus {
+				background-color: rgba(222,30,126,0.4);
+				color:$Nlightest;
+				@include transition(all 0.2s ease);
+
+				&::first-letter {
+					background-color: lighten($springColor1, 10%);
+
+				}
+			}
+		}
+
+		.mtm-button::first-letter {
+			border-radius: 50%;
+			padding: 0 .45em .1em .45em;
+			background-color: darken($springColor1, 10%);
+			margin-right:.2em;
+		}
+	}
+
+	.home-head-container {
+		height:auto;
+		position:absolute;
+		bottom:0;
+		width:100%;
+	}
+
+	.post--thumbnail.home-head {
+		overflow:hidden;
+		width:18em;
+		max-height: 10em;
+		margin:0 auto;
+
+		img {
+			margin-top:0px;
+			@include transition(margin 0.2s ease);
+
+			&:hover {
+				margin-top:-10px;
+			}
+		}
+	}
+
+// Scroll Pages
+
+.content--solutions {
+	.mtm-component--main {
+		display:none;
+	}
+
+	.mtm-tabs--title-container {
+
+		li {
+			padding:0;
+			margin:0 .2em .2em 0;
+			color:$Nlighter;
+			transition: color 300ms;
+
+			&:hover {
+				color:$springColor1;
+				transition: color 300ms;
+			}
+
+			&.current {
+				font-weight:200;
+				color:$Ndarkest;
+
+				&:after {
+					content: ' \2193';
+				}
+			}
+		}
+
+		[data-tab="tab-1"] {
+			&:before {
+				content: 'I need a ';
+				color: $Ndarkest;
+			}
+		}
+	}
+
+	.mtm-tabs--content {
+		border:none;
+	}
+}
+
+
+.mtm-component--term-list {
+	li {
+		font-family:$headingFont;
+		display:inline-block;
+		margin-bottom: .2em;
+		font-size: 1.5em;
+	}
+
+	a {
+		font-weight:100;
+
+		&.showcasing {
+			color:$Ndarkest;
+
+			&:after {
+				content: ' \2193';
+			}
+		}
+	}
+}
+
+.mtm-grid--single {
+
+	&.showcasing {
+		h5 a {
+			color:$Ndarkest;
+
+			&:after {
+				content: ' \2193';
+			}
+		}
+	}
+}
+
+.mtm-list--single.post {
+	border:none;
+	margin-bottom: 3em;
+}
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+
+	.content--body .mtm-component {
+		padding: 2em $maxPadding;
+	}
+// Home
+
+	.mtm-component--home {
+		h1 {
+			margin-top:2em;
+			font-size: 3.5em;
+		}
+	}
+
+	.home-head-container {
+		right:0;
+		float:right;
+		width:inherit;
+	}
+
+	.post--thumbnail.home-head {
+		max-height:12em;
+		width:20em;
+	}
+
+// Scroll Pages
+	
+	.mtm-component--main, .mtm-tabs--title-container, .mtm-error--main, .content--contact h2{
+		@include pinkgrid( $colspan: 4, $padside: 2% );
+		@include pinkrow( $rowitems: 2 );
+	}
+
+	.mtm-component--content, .mtm-tabs--content.current, .mtm-error--content, .content--contact .gform_wrapper {
+		@include pinkgrid( $colspan: 8, $padside: 2% );
+		@include pinkrow( $rowitems: 1 );
+	}
+
+	.content--solutions .mtm-component--content {
+		@include pinkgrid( $colspan: 12 );
+		@include pinkrow( $rowitems: 1 );
+
+	}
+
+	.content--solutions {
+
+		.mtm-tabs--title-container {
+
+			li {
+				margin:0;
+
+				&.current {
+
+					&:after {
+						content: ' \203A';
+					}
+				}
+			}
+		}
+	}
+
+	.mtm-component--term-list li {
+		display:block;
+
+		a.showcasing:after {
+			content: ' \203A';
+		}
+	}
+
+	.content--contact {
+		p {
+			display:none;
+		}
+		.gform_wrapper {
+			margin-top:0;
+		}
+	}
+
+}
+
+@media only screen and (min-width: #{$largeBreakpoint}) {
+	.mtm-component--main, .mtm-tabs--title-container, .content--contact h2{
+		@include pinkgrid( $colspan: 3, $padside: 2% );
+		@include pinkrow( $rowitems: 2 );
+	}
+
+	.mtm-component--content, .mtm-tabs--content.current, .content--contact .gform_wrapper {
+		@include pinkgrid( $colspan: 9, $padside: 2% );
+		@include pinkrow( $rowitems: 1 );
+	}
+
+
+}

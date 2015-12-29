@@ -1,0 +1,113 @@
+.post, .archive {
+    @include clearfix();
+    margin-bottom: 5em;
+}
+
+    .post--title {
+        @include rem-px('margin-bottom', .75rem);
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .post--thumbnail {
+        width: 100%;
+        @include rem-px('margin-bottom', .75rem);
+    }
+
+    .post--byline {
+        @include rem-px('margin', 0, 0, .75rem, 0);
+        font-style: italic;
+
+        a {
+            font-style: italic;
+        }
+
+        .post--metadata_categories {
+            display:inline-block;
+        }
+    }
+
+    .post--summary {
+        @include clearfix();
+    }
+
+    .post--content { 
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            margin-top:$baselineHeight/1.5;
+            margin-bottom:$baselineHeight/2.25;
+        }
+    }
+
+    .post--metadata {
+        margin-top: 1em;
+        font-size: .875em;
+        font-style: italic;
+
+        ul {
+            display:inline;
+            margin: 0 1em 0 0;
+            padding:0;
+            word-wrap:normal;
+
+            li {
+                display:inline-block;
+                list-style:none;
+                margin: 0;
+                padding:0 .1em 0 0;
+            }
+        }
+
+
+
+        a {
+            font-style: italic;
+        }
+    }
+
+    .single {
+        
+        .post--metadata {
+            margin-top: .25em;
+            margin-bottom: 2em;
+        }
+    }
+
+        .post--metadata--title {
+            font-weight: bold;
+        }
+
+    .single-post {
+        .content-full .content--page {
+            padding-top:0px;
+        }
+
+    }    
+    .post--hr {
+        width: 50%;
+        margin: 3em auto;
+    }
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+
+    .single-post {
+        .post header {
+            @include pinkgrid( $colspan: 4, $padside: 3% );
+            @include pinkrow( $rowitems: 2 );
+        }
+
+        .post--thumbnail img {
+            width:100%;
+        }
+
+        .post--content {
+            @include pinkgrid( $colspan: 8, $padside: 3% );
+            @include pinkrow( $rowitems: 2 );
+        }
+    }
+
+        
+}

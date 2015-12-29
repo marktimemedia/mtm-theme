@@ -1,0 +1,82 @@
+.single-project--content .post--content {
+	margin-bottom:.7em;
+}
+
+.single-project--website, .single-project--atribution {
+	display:block;
+	margin-bottom:1em;
+}
+
+.single-project--attribution {
+
+	font-size:.875em;
+	
+	p, a {
+		font-style:italic;
+	}
+}
+
+.alert.h3 {
+	margin-bottom:.2em;
+}
+
+.single-project--img img {
+	border: 1px solid darken(#fff, 4%);
+}
+
+.expanded-gallery-single {
+	padding: 0;
+	max-height:0;
+	overflow:hidden;
+	border:0px;
+	box-sizing:border-box;
+	transition: max-height 800ms, padding 300ms;
+
+		&.animate-show {
+			max-height:1000px;
+			padding:1em 0;
+			border-top:1px solid $Nlight;
+			border-bottom:1px solid $Nlight;
+			transition: max-height 800ms, padding 300ms;
+			margin-bottom: 1em;
+
+		}
+}
+
+		.single-project--img {
+			display:none;
+		}
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+	.single-project--img {
+		display:inline-block;
+	}
+}
+
+@media only screen and (min-width: #{$largeBreakpoint}) {
+	
+	.single-project--img {
+		@include pinkgrid( $colspan: 6, $padside: 3% );
+		@include pinkrow( $rowitems: 2 );
+	}
+
+	.single-project--content {
+		@include pinkgrid( $colspan: 6, $padside: 3% );
+		@include pinkrow( $rowitems: 2 );
+
+	}
+}
+
+@media only screen and (min-width: #{$widescreenBreakpoint}) {
+	
+	.single-project--img {
+		@include pinkgrid( $colspan: 7, $padside: 3% );
+		@include pinkrow( $rowitems: 2 );
+	}
+
+	.single-project--content {
+		@include pinkgrid( $colspan: 5, $padside: 3% );
+		@include pinkrow( $rowitems: 2 );
+
+	}
+}

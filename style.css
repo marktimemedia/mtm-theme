@@ -81,7 +81,7 @@ body {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   font-size: 100%;
   line-height: 1.3em;
-  color: #595559;
+  color: #322e2f;
   letter-spacing: 0px;
   font-weight: 200; }
 
@@ -89,7 +89,7 @@ p {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   font-size: 100%;
   line-height: 1.3em;
-  color: #595559;
+  color: #322e2f;
   letter-spacing: 0px;
   font-weight: 200; }
 
@@ -225,7 +225,7 @@ ul,
 ol {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   font-size: 100%;
-  color: #595559;
+  color: #322e2f;
   letter-spacing: 0px;
   margin-left: 1em;
   padding: 0 0 0 1em; }
@@ -307,7 +307,7 @@ samp {
   border: 0;
   font-family: "Source Code Pro", "source-code-pro", monospace;
   font-size: 0.875em;
-  color: #595559;
+  color: #322e2f;
   line-height: 1.3em; }
 
 pre {
@@ -350,7 +350,7 @@ hr {
 /* FORMS */
 label {
   font-size: 1.125em;
-  color: #595559; }
+  color: #322e2f; }
 
 input[type="text"],
 input[type="date"],
@@ -373,7 +373,7 @@ textarea,
   margin-bottom: 1.3em;
   background-color: #fff;
   border: 1px solid #d4ccd4;
-  color: #595559;
+  color: #322e2f;
   font-size: .875em; }
   input[type="text"]:active, input[type="text"]:focus,
   input[type="date"]:active,

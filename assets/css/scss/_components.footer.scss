@@ -8,7 +8,7 @@
 }
     .footer--inner {
         @include clearfix();
-        padding: 0 $smallPadding;
+        padding: 0 $maxPadding; // for a boxed width background
     }
 
     .footer--copyright {

@@ -59,7 +59,6 @@
     .header-main {
         margin-bottom: 0;
         height:3.9em;
-        margin-bottom: 0;
     }
 
         .header--inner {
@@ -99,7 +98,7 @@
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
     .header--inner {
-        @include rem-px('max-width', $boxedMax);
         @include center-block;
+        @include rem-px('max-width', $boxedMax);
     }
 }

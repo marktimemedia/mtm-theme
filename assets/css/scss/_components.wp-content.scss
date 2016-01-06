@@ -99,8 +99,17 @@
             @include pinkrow( $rowitems: 2 );
         }
 
-        .post--thumbnail img {
-            width:100%;
+        .post--thumbnail {
+            height:27em;
+            overflow:hidden;
+            position:relative;
+
+            img {
+                width:100%;
+                position:absolute;
+                top:50%;
+                margin-top:-30%;
+            }
         }
 
         .post--content {

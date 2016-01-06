@@ -5,7 +5,8 @@
         <?php endif; ?>
         <header >
             <h1 class="post--title"><?php the_title(); ?></h1>
-            <?php get_template_part( 'templates/entry-meta' ); ?>       
+            <?php get_template_part( 'templates/entry-meta' ); ?> 
+            <a class="go-back" href="/blog"><?php esc_html_e( 'Back to Blog', 'spring' ) ?></a>        
         </header>
         <div class="post--content">
             <?php the_content(); ?>

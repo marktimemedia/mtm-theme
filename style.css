@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--
     Theme Name:  Marktime Media Theme
     Description:  A custom WordPress theme
@@ -83,7 +84,7 @@ body {
   line-height: 1.3em;
   color: #322e2f;
   letter-spacing: 0px;
-  font-weight: 200; }
+  font-weight: 300; }
 
 p {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
@@ -91,7 +92,7 @@ p {
   line-height: 1.3em;
   color: #322e2f;
   letter-spacing: 0px;
-  font-weight: 200; }
+  font-weight: 300; }
 
 /* Links */
 a {
@@ -237,7 +238,7 @@ ol {
 
 li {
   line-height: 1.3em;
-  font-weight: 200;
+  font-weight: 300;
   margin: .25em 0; }
 
 blockquote {
@@ -1561,8 +1562,15 @@ figcaption {
       padding-left: 0; }
     .single-post .post header:nth-of-type(2n+2) {
       padding-right: 0; }
-  .single-post .post--thumbnail img {
-    width: 100%; }
+  .single-post .post--thumbnail {
+    height: 27em;
+    overflow: hidden;
+    position: relative; }
+    .single-post .post--thumbnail img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      margin-top: -30%; }
   .single-post .post--content {
     display: inline-block;
     margin-right: -.275em;
@@ -1573,6 +1581,12 @@ figcaption {
       padding-left: 0; }
     .single-post .post--content:nth-of-type(2n+2) {
       padding-right: 0; } }
+.go-back {
+  display: block;
+  margin-bottom: 1em; }
+  .go-back:before {
+    content: '← '; }
+
 .single-project--content .post--content {
   margin-bottom: .7em; }
 
@@ -1673,9 +1687,11 @@ figcaption {
     padding-left: 40px;
     padding-left: 2.5rem;
     border-left: 1px solid #d4ccd4;
+    border-top: 1px solid #f4f2f3;
+    border-bottom: 1px solid #f4f2f3;
     list-style: none; }
 
-.comments--form-row textarea {
+.comments--form-row textarea, .comments--form-row input {
   margin-top: .5em; }
 
 .comment {
@@ -1720,10 +1736,20 @@ figcaption {
   .comment--byline a {
     font-style: italic; }
 
+.bypostauthor img.avatar {
+  border: 2px solid #de1e7e; }
+
 .comments--respond {
   margin-top: 2em;
   border-top: 1px solid #d4ccd4;
   padding-top: 1em; }
+
+.comment-subscription-form {
+  margin-bottom: 0; }
+  .comment-subscription-form:first-of-type {
+    margin-top: 1em; }
+  .comment-subscription-form label.subscribe-label {
+    font-size: 1em; }
 
 @media only screen and (min-width: 51em) {
   .comments {

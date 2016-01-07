@@ -13,11 +13,11 @@
 
     <section class="mtm-list--post-content<?php echo $content_size; ?>">
         <header>
-            <h2 class="post--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2 class="post--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php edit_post_link( '(Edit)', ' • ' ); ?></h2>
         </header>
         <?php get_template_part( 'templates/entry-meta' ); ?>
         <div class="post--summary">
-            <?php the_excerpt( '<p>Continue Reading...</p>' ); ?>
+            <?php wp_trim_excerpt(''); ?>
         </div>
     </section>
 </article>

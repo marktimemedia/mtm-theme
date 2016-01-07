@@ -188,7 +188,7 @@ h5,
 .h5 {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   margin-bottom: 0.92857em;
-  color: #948f93;
+  color: #B3ACB3;
   font-size: 19.2px;
   font-size: 1.2rem;
   font-weight: 300; }
@@ -1540,6 +1540,11 @@ figcaption {
 .single .post--metadata {
   margin-top: .25em;
   margin-bottom: 2em; }
+.single .post--summary {
+  font-size: 1.3em; }
+  .single .post--summary p {
+    line-height: 1.3;
+    color: #B3ACB3; }
 
 .post--metadata--title {
   font-weight: bold; }
@@ -1615,8 +1620,8 @@ figcaption {
   .expanded-gallery-single.animate-show {
     max-height: 1000px;
     padding: 1em 0;
-    border-top: 1px solid #948f93;
-    border-bottom: 1px solid #948f93;
+    border-top: 1px solid #B3ACB3;
+    border-bottom: 1px solid #B3ACB3;
     transition: max-height 800ms, padding 300ms;
     margin-bottom: 1em; }
 

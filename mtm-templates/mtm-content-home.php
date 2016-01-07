@@ -2,7 +2,7 @@
 
 	<section class ="content--page">
 	
-		<h1><?php the_title(); ?></h1>
+		<h1><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>
 		<?php
 		
 		$home_post = get_post( get_the_ID() );

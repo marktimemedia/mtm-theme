@@ -4,7 +4,7 @@
     <?php endif; ?>
     <div class="single-project--content">
         <header>
-            <h1 class="post--title"><?php the_title(); ?></h1>
+            <h1 class="post--title"><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>
             <?php get_template_part( 'templates/post-meta' ); ?>
         </header>
 

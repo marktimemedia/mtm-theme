@@ -1,5 +1,5 @@
 // Root
-$textColor: $Ndarkest;
+$textColor: $Ndarker;
 $columnMargin: .5em;
 $gutter: 1em;
 $textFontSize: 1rem;
@@ -7,7 +7,7 @@ $textFontSize: 1rem;
 // Typography
 $baseFont: 'Source Sans Pro', "source-sans-pro", sans-serif;
 $baseFontSize: 100%;
-$baselineHeight: 1.3em;
+$baselineHeight: 1.625em;
 $baseLetterSpace: 0px;
 $baseFontWeight: 300;
 
@@ -21,11 +21,11 @@ $subheadingLetterSpace: 0px;
 
 $h1Color: $Ndarkest;
 $h1Size: 2.25em;
-$h1FontWeight: 300;
+$h1FontWeight: 200;
 
 $h2Color: $Ndark;
-$h2Size: 2em;
-$h2FontWeight: 300;
+$h2Size: 1.75em;
+$h2FontWeight: 200;
 
 $h3Color: $Nmid;
 $h3Size: 1.5em;
@@ -41,7 +41,7 @@ $h5FontWeight: 300;
 
 $h6Color: $Nlight;
 $h6Size: .875em;
-$h6FontWeight: 200;
+$h6FontWeight: 500;
 
 $headingTextShadow: none;
 $codeFont: 'Source Code Pro', "source-code-pro", monospace;
@@ -76,5 +76,4 @@ $codeBorder: 0;
 $codeFontFamily: $codeFont;
 $codeFontSize: .875em;
 $codeColor: $textColor;
-
 

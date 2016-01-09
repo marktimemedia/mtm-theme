@@ -81,18 +81,19 @@ body {
   background: #171616;
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   font-size: 100%;
-  line-height: 1.3em;
-  color: #322e2f;
+  line-height: 1.625em;
+  color: #4d4648;
   letter-spacing: 0px;
   font-weight: 300; }
 
 p {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   font-size: 100%;
-  line-height: 1.3em;
-  color: #322e2f;
+  line-height: 1.625em;
+  color: #4d4648;
   letter-spacing: 0px;
-  font-weight: 300; }
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
 
 /* Links */
 a {
@@ -124,6 +125,7 @@ h5, .h5,
 h6, .h6 {
   margin: 0;
   padding: 0;
+  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
   text-shadow: none;
@@ -138,32 +140,29 @@ h6, .h6 {
 
 h1,
 .h1 {
-  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
-  margin-bottom: 0.86667em;
+  margin-bottom: 0.90278em;
   color: #322e2f;
   font-size: 36px;
   font-size: 2.25rem;
-  font-weight: 300; }
+  font-weight: 200; }
   h1 a,
   .h1 a {
-    font-weight: 300; }
+    font-weight: 200; }
 
 h2,
 .h2 {
-  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
-  margin-bottom: 0.86667em;
+  margin-bottom: 0.95588em;
   color: #595559;
-  font-size: 32px;
-  font-size: 2rem;
-  font-weight: 300; }
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 200; }
   h2 a,
   .h2 a {
-    font-weight: 300; }
+    font-weight: 200; }
 
 h3,
 .h3 {
-  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
-  margin-bottom: 0.86667em;
+  margin-bottom: 0.95588em;
   color: #948790;
   font-size: 24px;
   font-size: 1.5rem;
@@ -174,50 +173,49 @@ h3,
 
 h4,
 .h4 {
-  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
-  margin-bottom: 0.74286em;
+  margin-bottom: 0.85526em;
   color: #948790;
   font-size: 19.2px;
   font-size: 1.2rem;
-  font-weight: 500; }
+  font-weight: 500;
+  text-transform: uppercase; }
   h4 a,
   .h4 a {
     font-weight: 500; }
 
 h5,
 .h5 {
-  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
-  margin-bottom: 0.92857em;
+  margin-bottom: 1.16071em;
   color: #B3ACB3;
   font-size: 19.2px;
   font-size: 1.2rem;
-  font-weight: 300; }
+  font-weight: 300;
+  text-transform: uppercase; }
   h5 a,
   .h5 a {
     font-weight: 300; }
 
 h6,
 .h6 {
-  font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
-  margin-bottom: 1.08333em;
+  margin-bottom: 1.25em;
   color: 0.875em;
   font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  text-transform: uppercase; }
   h6 a,
   .h6 a {
-    font-weight: 200; }
+    font-weight: 500; }
 
 /* Lists */
 ol,
 ul,
 dl {
-  margin-bottom: 1.3em;
+  margin-bottom: 1.625em;
   line-height: 1.625em; }
 
 p,
 address {
-  margin-bottom: 0.65em;
-  line-height: 1.625em; }
+  margin-bottom: 0.8125em; }
 
 small {
   font-size: .875em; }
@@ -226,7 +224,7 @@ ul,
 ol {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   font-size: 100%;
-  color: #322e2f;
+  color: #4d4648;
   letter-spacing: 0px;
   margin-left: 1em;
   padding: 0 0 0 1em; }
@@ -237,9 +235,9 @@ ol {
     margin-bottom: 0; }
 
 li {
-  line-height: 1.3em;
+  line-height: 1.625em;
   font-weight: 300;
-  margin: .25em 0; }
+  margin: .3em 0; }
 
 blockquote {
   margin-bottom: 14px;
@@ -262,10 +260,11 @@ blockquote {
 
 dl,
 dd {
-  margin-bottom: 0.65em; }
+  margin-bottom: 0.8125em; }
 
 dt {
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 0.40625em; }
 
 b,
 strong {
@@ -277,7 +276,8 @@ strong {
 i,
 dfn,
 em {
-  font-style: italic; }
+  font-style: italic;
+  font-weight: inherit; }
   i a,
   dfn a,
   em a {
@@ -308,8 +308,8 @@ samp {
   border: 0;
   font-family: "Source Code Pro", "source-code-pro", monospace;
   font-size: 0.875em;
-  color: #322e2f;
-  line-height: 1.3em; }
+  color: #4d4648;
+  line-height: 1.625em; }
 
 pre {
   white-space: pre;
@@ -351,7 +351,7 @@ hr {
 /* FORMS */
 label {
   font-size: 1.125em;
-  color: #322e2f; }
+  color: #4d4648; }
 
 input[type="text"],
 input[type="date"],
@@ -371,10 +371,10 @@ textarea,
   width: 100%;
   max-width: 30em;
   padding: 0.5em;
-  margin-bottom: 1.3em;
+  margin-bottom: 1.625em;
   background-color: #fff;
   border: 1px solid #d4ccd4;
-  color: #322e2f;
+  color: #4d4648;
   font-size: .875em; }
   input[type="text"]:active, input[type="text"]:focus,
   input[type="date"]:active,
@@ -523,7 +523,7 @@ textarea[readonly] {
 table {
   height: 100%;
   width: 100%;
-  margin-bottom: 0.65em;
+  margin-bottom: 0.8125em;
   background-color: transparent;
   border-spacing: 0; }
 
@@ -531,7 +531,7 @@ th,
 td {
   padding: 0.25em;
   vertical-align: middle;
-  line-height: 1.3em;
+  line-height: 1.625em;
   text-align: left;
   font-size: .875em; }
 
@@ -569,7 +569,7 @@ img {
   -ms-interpolation-mode: bicubic; }
 
 figure {
-  margin-bottom: 1.3em; }
+  margin-bottom: 1.625em; }
 
 figcaption {
   display: block;
@@ -1517,8 +1517,8 @@ figcaption {
     clear: both; }
 
 .post--content h1, .post--content h2, .post--content h3, .post--content h4, .post--content h5, .post--content h6, .post--content .h1, .post--content .h2, .post--content .h3, .post--content .h4, .post--content .h5, .post--content .h6 {
-  margin-top: 0.86667em;
-  margin-bottom: 0.57778em; }
+  margin-top: 1.16071em;
+  margin-bottom: 0.67708em; }
 
 .post--metadata {
   margin-top: 1em;

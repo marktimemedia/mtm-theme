@@ -1,13 +1,17 @@
 .mtm-component {
-	padding: 2em 0;
+	//padding: 2em 0;
 
 	&:nth-of-type(2n) {
 		background-color: darken($Nlightest, .4%);
+		
+		.content--page {
+			padding-top: 1rem;
+		}
 	}
 
 	.content--page {
-		padding-top: 6em !important;
-    	margin-top: -6em !important;
+		//padding-top: 6em !important;
+    	//margin-top: -6em !important;
 	}
 }
 
@@ -137,6 +141,12 @@
 	}
 }
 
+.content--contact {
+	.mtm-component--main {
+		display: none;
+	}
+}
+
 
 .mtm-component--term-list {
 	li {
@@ -177,10 +187,14 @@
 	margin-bottom: 3em;
 }
 
+.content .content-full .content--work .content--page {
+	//padding-top: 8em !important;
+}
+
 @media only screen and (min-width: #{$midBreakpoint}) {
 
 	.content--body .mtm-component {
-		padding: 2em $maxPadding;
+		//padding: 2em $maxPadding;
 	}
 // Home
 
@@ -204,12 +218,12 @@
 
 // Scroll Pages
 	
-	.mtm-component--main, .mtm-tabs--title-container, .mtm-error--main, .content--contact h2{
+	.mtm-component--main, .mtm-tabs--title-container, .mtm-error--main, .content--contact .h1{
 		@include pinkgrid( $colspan: 4, $padside: 2% );
 		@include pinkrow( $rowitems: 2 );
 	}
 
-	.mtm-component--content, .mtm-tabs--content.current, .mtm-error--content, .content--contact .gform_wrapper {
+	.mtm-component--content, .mtm-tabs--content.current, .mtm-error--content, .content--contact .mtm-extra-content {
 		@include pinkgrid( $colspan: 8, $padside: 2% );
 		@include pinkrow( $rowitems: 1 );
 	}
@@ -246,6 +260,7 @@
 	}
 
 	.content--contact {
+
 		p {
 			display:none;
 		}
@@ -257,12 +272,12 @@
 }
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
-	.mtm-component--main, .mtm-tabs--title-container, .content--contact h2{
+	.mtm-component--main, .mtm-tabs--title-container, .content--contact .h1{
 		@include pinkgrid( $colspan: 3, $padside: 2% );
 		@include pinkrow( $rowitems: 2 );
 	}
 
-	.mtm-component--content, .mtm-tabs--content.current, .content--contact .gform_wrapper {
+	.mtm-component--content, .mtm-tabs--content.current, .content--contact .mtm-extra-content{
 		@include pinkgrid( $colspan: 9, $padside: 2% );
 		@include pinkrow( $rowitems: 1 );
 	}

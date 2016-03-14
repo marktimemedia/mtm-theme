@@ -1,5 +1,5 @@
 <section class="mtm-component mtm-component--home" style="background-image:url('<?php echo esc_url( mtm_acf_image_property( 'mtm_home_background_image', 'url' ) ); ?>')">
-
+Hi
 	<section class ="content--page">
 	
 		<h1><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>

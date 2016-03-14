@@ -593,7 +593,7 @@ figcaption {
   font-size: 1rem; }
 
 .content {
-  padding: 3.9em 0 0 0; }
+  padding: 0 0 0 0; }
   .content.inner-padding {
     padding: 0 1rem; }
   .content .content-full .content--page {
@@ -607,8 +607,10 @@ figcaption {
   background: #fff; }
 
 @media only screen and (min-width: 51em) {
-  .content .content-full .content--page {
-    padding: 3rem; } }
+  .content {
+    padding-bottom: 100px; }
+    .content .content-full .content--page {
+      padding: 3rem; } }
 @media only screen and (min-width: 65em) {
   .content-main {
     padding-right: 1em;
@@ -782,13 +784,10 @@ figcaption {
     margin: 0 0 1em 1em; }
 
 /* 06. COMPONENTS */
-.mtm-component {
-  padding: 2em 0; }
-  .mtm-component:nth-of-type(2n) {
-    background-color: #f3f1f2; }
-  .mtm-component .content--page {
-    padding-top: 6em !important;
-    margin-top: -6em !important; }
+.mtm-component:nth-of-type(2n) {
+  background-color: #f3f1f2; }
+  .mtm-component:nth-of-type(2n) .content--page {
+    padding-top: 1rem; }
 
 .mtm-component--home {
   overflow: hidden;
@@ -882,6 +881,9 @@ figcaption {
 .content--solutions .mtm-tabs--content {
   border: none; }
 
+.content--contact .mtm-component--main {
+  display: none; }
+
 .mtm-component--term-list li {
   font-family: "Source Sans Pro", "source-sans-pro", sans-serif;
   display: inline-block;
@@ -904,9 +906,6 @@ figcaption {
   margin-bottom: 3em; }
 
 @media only screen and (min-width: 51em) {
-  .content--body .mtm-component {
-    padding: 2em 3rem; }
-
   .mtm-component--home h1 {
     margin-top: 2em;
     font-size: 3.5em; }
@@ -920,18 +919,18 @@ figcaption {
     max-height: 12em;
     width: 20em; }
 
-  .mtm-component--main, .mtm-tabs--title-container, .mtm-error--main, .content--contact h2 {
+  .mtm-component--main, .mtm-tabs--title-container, .mtm-error--main, .content--contact .h1 {
     display: inline-block;
     margin-right: -.275em;
     vertical-align: top;
     width: 33.33333%;
     padding: 0 2%; }
-    .mtm-component--main:nth-of-type(2n+1), .mtm-tabs--title-container:nth-of-type(2n+1), .mtm-error--main:nth-of-type(2n+1), .content--contact h2:nth-of-type(2n+1) {
+    .mtm-component--main:nth-of-type(2n+1), .mtm-tabs--title-container:nth-of-type(2n+1), .mtm-error--main:nth-of-type(2n+1), .content--contact .h1:nth-of-type(2n+1) {
       padding-left: 0; }
-    .mtm-component--main:nth-of-type(2n+2), .mtm-tabs--title-container:nth-of-type(2n+2), .mtm-error--main:nth-of-type(2n+2), .content--contact h2:nth-of-type(2n+2) {
+    .mtm-component--main:nth-of-type(2n+2), .mtm-tabs--title-container:nth-of-type(2n+2), .mtm-error--main:nth-of-type(2n+2), .content--contact .h1:nth-of-type(2n+2) {
       padding-right: 0; }
 
-  .mtm-component--content, .mtm-tabs--content.current, .mtm-error--content, .content--contact .gform_wrapper {
+  .mtm-component--content, .mtm-tabs--content.current, .mtm-error--content, .content--contact .mtm-extra-content {
     display: inline-block;
     margin-right: -.275em;
     vertical-align: top;
@@ -964,18 +963,18 @@ figcaption {
   .content--contact .gform_wrapper {
     margin-top: 0; } }
 @media only screen and (min-width: 65em) {
-  .mtm-component--main, .mtm-tabs--title-container, .content--contact h2 {
+  .mtm-component--main, .mtm-tabs--title-container, .content--contact .h1 {
     display: inline-block;
     margin-right: -.275em;
     vertical-align: top;
     width: 25%;
     padding: 0 2%; }
-    .mtm-component--main:nth-of-type(2n+1), .mtm-tabs--title-container:nth-of-type(2n+1), .content--contact h2:nth-of-type(2n+1) {
+    .mtm-component--main:nth-of-type(2n+1), .mtm-tabs--title-container:nth-of-type(2n+1), .content--contact .h1:nth-of-type(2n+1) {
       padding-left: 0; }
-    .mtm-component--main:nth-of-type(2n+2), .mtm-tabs--title-container:nth-of-type(2n+2), .content--contact h2:nth-of-type(2n+2) {
+    .mtm-component--main:nth-of-type(2n+2), .mtm-tabs--title-container:nth-of-type(2n+2), .content--contact .h1:nth-of-type(2n+2) {
       padding-right: 0; }
 
-  .mtm-component--content, .mtm-tabs--content.current, .content--contact .gform_wrapper {
+  .mtm-component--content, .mtm-tabs--content.current, .content--contact .mtm-extra-content {
     display: inline-block;
     margin-right: -.275em;
     vertical-align: top;
@@ -1153,7 +1152,11 @@ figcaption {
   position: fixed;
   z-index: 999;
   height: 3.9em;
-  transition: all 300ms ease; }
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s; }
 
 .header--inner {
   padding: 0; }
@@ -1171,15 +1174,30 @@ figcaption {
     margin-bottom: 0.3rem; }
   .header--blog-name img {
     max-width: 5em;
-    transition: all 500ms ease; }
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s; }
 
 .header-main-small {
   height: 0px;
   overflow: hidden;
-  transition: all 300ms ease; }
+  transition: all 800ms ease; }
   .header-main-small .header--blog-name img {
     max-width: 0;
-    transition: all 500ms ease; }
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s; }
+  .header-main-small .open-button {
+    height: 0em;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
 
 @media only screen and (min-width: 31em) {
   .header--blog-name {
@@ -1240,7 +1258,8 @@ figcaption {
   border-radius: 0;
   background-clip: padding-box;
   overflow: hidden;
-  font-size: 1em; }
+  font-size: 1em;
+  transition: all 1s ease; }
   .open-button:active, .open-button:focus {
     outline: 0; }
   .open-button span {
@@ -1434,6 +1453,9 @@ figcaption {
   .widget:last-child {
     margin-bottom: 0; }
 
+.jetpack_subscription_widget .widgettitle {
+  display: none; }
+
 .search {
   position: relative;
   width: -moz-calc(100% - 7em);
@@ -1574,8 +1596,10 @@ figcaption {
     .single-post .post--thumbnail img {
       width: 100%;
       position: absolute;
+      left: 50%;
       top: 50%;
-      margin-top: -30%; }
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%); }
   .single-post .post--content {
     display: inline-block;
     margin-right: -.275em;

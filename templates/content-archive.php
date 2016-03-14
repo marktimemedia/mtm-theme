@@ -17,7 +17,7 @@
         </header>
         <?php get_template_part( 'templates/entry-meta' ); ?>
         <div class="post--summary">
-            <?php wp_trim_excerpt(''); ?>
+            <?php the_excerpt(); ?>
         </div>
     </section>
 </article>

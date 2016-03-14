@@ -3,7 +3,8 @@
 	/* Scroll Header */
 
 	var lastScrollTop = $(window).scrollTop(); // reset variable any time it reloads
-	var siteHeader = $('.header-main');
+	var siteHeader = $('.header-main'); // your header element
+	var changeDirection = -1; // base comparitive variable
 
 	$(window).on('scroll', (function(event) {
 		var scrollPosition = $(this).scrollTop();
@@ -21,19 +22,28 @@
 
 		} else { // this is mobile breakpoint or smaller
 
-			if (scrollPosition > 50 && scrollPosition > lastScrollTop) { // once you get far enough down, hide the header
+			if (scrollPosition > 120 && scrollPosition > lastScrollTop) { // once you get far enough down, hide the header
 		    	
+		    	changeDirection = -1; // reset changeDirection
 		        siteHeader.addClass('header-main-small'); 
 
 		    } else { // bring it back up again if we scroll up at all
 
-		    	// console.log('up');
+		    	if ( -1 == changeDirection) {
+		    		changeDirection = scrollPosition; // only set changeDirection once
+		    	}
 
-		    	siteHeader.removeClass('header-main-small');
+		    	// console.log(changeDirection + ' ' + scrollPosition);
+
+		    	if ( scrollPosition < (changeDirection - 100) ) { // only add after you've scrolled up a bit
+
+			    	siteHeader.removeClass('header-main-small');
+			    	changeDirection = -1; // reset changeDirection
+			    }
+
 		    }
 
 		    lastScrollTop = scrollPosition;
-
 		}
 
 	}));

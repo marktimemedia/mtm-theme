@@ -1,7 +1,13 @@
 <?php // Manual Grid
 
+global $mtm_grid_row_class;
+
 $grid_posts = _get_field( 'mtm_grid_archive_manual' );
-$taxonomy = mtm_acf_taxonomy_property( 'manual', 'taxonomy' ); ?>
+$taxonomy = get_field( 'mtm_manual_archive_taxonomy' ); 
+$mtm_grid_row_class = mtm_output_row_number(); 
+
+$grid_posts = _get_field( 'mtm_grid_archive_manual' );
+$taxonomy = get_field( 'mtm_manual_archive_taxonomy' ); ?>
 
 
 <div <?php post_class( 'mtm-component--main' ); ?>>
@@ -15,7 +21,7 @@ $taxonomy = mtm_acf_taxonomy_property( 'manual', 'taxonomy' ); ?>
 
 <?php if( $grid_posts ) { ?>
 
-	<div class="mtm-component--content mtm-grid--wrapper">
+	<div class="mtm-component--content mtm-grid--wrapper hi">
 		<div class="gallery-dynamic-row">
 	
 			<?php foreach( $grid_posts as $post) { // variable must be called $post (IMPORTANT)

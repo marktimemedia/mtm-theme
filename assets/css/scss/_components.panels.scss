@@ -80,6 +80,7 @@
 		position:absolute;
 		bottom:0;
 		width:100%;
+		display: none;
 	}
 
 	.post--thumbnail.home-head {
@@ -191,6 +192,12 @@
 	//padding-top: 8em !important;
 }
 
+@media only screen and (min-width: #{$smallBreakpoint}) {
+	.home-head-container {
+		display: block;
+	}
+}
+
 @media only screen and (min-width: #{$midBreakpoint}) {
 
 	.content--body .mtm-component {
@@ -251,6 +258,10 @@
 		}
 	}
 
+	.mtm-tabs--content.current {
+		margin-top: -4em;
+	}
+
 	.mtm-component--term-list li {
 		display:block;
 
@@ -281,6 +292,5 @@
 		@include pinkgrid( $colspan: 9, $padside: 2% );
 		@include pinkrow( $rowitems: 1 );
 	}
-
 
 }

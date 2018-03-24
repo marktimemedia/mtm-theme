@@ -34,6 +34,10 @@
     }
 }
 
+.blog .content {
+    margin-top: 6em;
+}
+
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .content{
@@ -43,6 +47,10 @@
         .content-full .content--page {
             padding: $maxPadding; // for a boxed width background with no sidebar
         }
+    }
+
+    .blog .content {
+        margin-top: 4em;
     }
 }
 

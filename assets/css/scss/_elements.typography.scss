@@ -1,37 +1,31 @@
 p {
-    font-family: $baseFont;
-    font-size: $baseFontSize;
     line-height: $baselineHeight;
-    color: $textColor;
-    letter-spacing: $baseLetterSpace;
-    font-weight: $baseFontWeight;
-    text-rendering:  optimizeLegibility;
 }
 
 /* Links */
 
 a {
     color: $linkColor;
-    text-decoration: none;
     cursor: pointer;
+    font-weight: inherit;
+    text-decoration: none;
     transition: color .3s;
 
     &:hover {
-        color: $linkHover;
-        text-decoration: none;
         border: 0;
+        color: $linkHover;
         outline: 0;
+        text-decoration: none;
     }
 
     // &:visited {
-    //     color: $linkVisited;
     //     color: $linkVisited;
     // }
 
     &:focus,
     &:active {
-        color: $linkFocus;
         border: 0;
+        color: $linkFocus;
         outline: 0;
     }
 
@@ -55,11 +49,7 @@ h5, .h5,
 h6, .h6 {
     margin: 0;
     padding: 0;
-    font-family: $headingFont;
-    line-height: $headingLineHeight;
-    text-rendering:  optimizeLegibility;
     text-shadow: $headingTextShadow;
-    letter-spacing: $headingLetterSpace;
 
     * {
         line-height: $headingLineHeight;
@@ -68,75 +58,93 @@ h6, .h6 {
 
 h1,
 .h1 {
-    margin-bottom: $baselineHeight / 1.8;
     color: $h1Color;
-    @include rem-px('font-size', $h1Size);
+    font-family: $headingFont;
+    @include rem-px('font-size', $h1Size * .9);
     font-weight: $h1FontWeight;
+    letter-spacing: $headingLetterSpace;
+    line-height: $headingLineHeight;
+    margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h1FontWeight;
+        //font-weight: $h1FontWeight;
     }
 }
 
 h2,
 .h2 {
-    margin-bottom: $baselineHeight / 1.7;
     color: $h2Color;
-    @include rem-px('font-size', $h2Size);
+    font-family: $headingFont;
+    @include rem-px('font-size', $h2Size * .9);
     font-weight: $h2FontWeight;
+    letter-spacing: $headingLetterSpace;
+    line-height: $headingLineHeight;
+    margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h2FontWeight;
+        //font-weight: $h2FontWeight;
     }
 }
 
 h3,
 .h3 {
-    margin-bottom: $baselineHeight / 1.7;
     color: $h3Color;
-    @include rem-px('font-size', $h3Size);
+    font-family: $subheadingFont;
+    @include rem-px('font-size', $h3Size * .9);
     font-weight: $h3FontWeight;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
+    margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h3FontWeight;
+        //font-weight: $h3FontWeight;
     }
 }
 
 h4,
 .h4 {
-    margin-bottom: $baselineHeight / 1.9;
     color: $h4Color;
-    @include rem-px('font-size', $h4Size);
+    font-family: $subheadingFont;
+    @include rem-px('font-size', $h4Size * .9);
     font-weight: $h4FontWeight;
-    text-transform:uppercase;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
+    margin-bottom: $headingMargin;
+    text-transform: uppercase;
 
     a {
-        font-weight: $h4FontWeight;
+        //font-weight: $h4FontWeight;
     }
 }
 
 h5,
 .h5 {
-    margin-bottom: $baselineHeight / 1.4;
     color: $h5Color;
-    @include rem-px('font-size', $h5Size);
+    font-family: $subheadingFont;
+    @include rem-px('font-size', $h5Size * .9);
     font-weight: $h5FontWeight;
-    text-transform:uppercase;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
+    margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h5FontWeight;
+        //font-weight: $h5FontWeight;
     }
 }
 
 h6,
 .h6 {
-    margin-bottom: $baselineHeight / 1.3;
-    color: $h6Size;
-    @include rem-px('font-size', $h6Size);
-    text-transform:uppercase;
+    color: $h6Color;
+    font-family: $subheadingFont;
+    @include rem-px('font-size', $h6Size * .9);
+    font-weight: $h6FontWeight;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
+    margin-bottom: $headingMargin;
+    text-transform: uppercase;
 
     a {
-        font-weight: $h6FontWeight;
+        //font-weight: $h6FontWeight;
     }
 }
 
@@ -145,8 +153,8 @@ h6,
 ol,
 ul,
 dl {
-    margin-bottom: $baselineHeight;
-    line-height: $baselineHeight;
+    line-height: 1.1em;
+    margin-bottom: $baselineHeight; 
 }
 
 p,
@@ -160,10 +168,9 @@ small {
 
 ul,
 ol {
-    font-family: $baseFont;
-    font-size: $baseFontSize;
-    color: $textColor;
-    letter-spacing: $baseLetterSpace;
+    //font-family: $baseFont;
+    font-size: inherit;
+    //letter-spacing: $baseLetterSpace;
     margin-left: 1em;
     padding: 0 0 0 $gutter;
 
@@ -174,39 +181,57 @@ ol {
 }
 
     li {
-        line-height: $baselineHeight;
         font-weight: $baseFontWeight;
+        line-height: 1.3em;
         margin: .3em 0;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: .2em;
+        }
+
+        span {
+            vertical-align: text-top;
+        }
     }
 
 blockquote {
-    @include rem-px('margin-bottom', $blockquoteMarginBottom);
-    padding-left: $blockquotePaddingLeft;
     border-left: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
     color: $blockquoteColor;
     font-family: $blockquoteFontFamily;
-    @include rem-px('font-size', $blockquoteFontSize);
     font-style: $blockquoteFontStyle;
     font-weight: $blockquoteFontWeight;
     line-height: 1.3em;
+    padding-left: $blockquotePaddingLeft;
+    @include rem-px('font-size', $blockquoteFontSize);
+    @include rem-px('margin-bottom', $blockquoteMarginBottom);
 
     * {
         font-family: $blockquoteFontFamily;
-        @include rem-px('font-size', $blockquoteFontSize);
         font-style: $blockquoteFontStyle;
-        font-weight: $blockquoteFontWeight;
+        @include rem-px('font-size', $blockquoteFontSize);
+        font-weight: $blockquoteFontWeight; 
     }
 }
 
+q {
+    font-style: italic;
+    font-weight: inherit;
+}
+
+cite {
+    font-weight: inherit;
+}
+
 dl,
-dd {
+dt {
     margin-bottom: $baselineHeight / 2;
 }
 
-dt {
+dd {
     font-weight: bold;
     margin-bottom:$baselineHeight/4;
 }
+
 
 b,
 strong {
@@ -233,7 +258,7 @@ u {
 }
 
 ins {
-    background-color: $Nlighter;
+    background-color: $Nlightest;
     color: $warningColor;
     text-decoration: none;
 }
@@ -247,17 +272,22 @@ mark {
 
 pre,
 code,
-kdb,
-samp {
-    display: block;
-    margin: $codeMargin;
-    padding: $codePadding;
+kbd,
+samp,
+var,
+tt {
     background-color: $codeBackground;
     border: $codeBorder;
-    font-family: $codeFontFamily;
-    font-size: $codeFontSize;
     color: $codeColor;
+    font-family: $codeFontFamily;
+    @include rem-px('font-size', $codeFontSize);
     line-height: $baselineHeight;
+    margin: $codeMargin;
+    padding: $codePadding;
+}
+
+code, kbd, var, tt {
+    display: inline-block;
 }
 
 pre {
@@ -268,9 +298,9 @@ pre {
 
 sub,
 sup {
-    position: relative;
-    font-size: .75em;
+    @include rem-px('font-size', .75rem);
     line-height: 0;
+    position: relative;
     vertical-align: middle;
 }
 
@@ -283,12 +313,12 @@ sub {
 }
 
 hr {
-    display: block;
-    margin: 1em 0;
-    padding: 0;
-    height: 1px;
-    border: 0;
     background-color: $Nlighter;
+    border: 0;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0; 
 }
 
 /* SELECTION */

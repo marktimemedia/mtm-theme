@@ -52,6 +52,31 @@
         }
     }
 
+    function navHeight() {
+        var heights = window.innerHeight;
+        var mq = window.matchMedia( "(max-width: 48.5em)" );
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (mq.matches) {
+              document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
+            } 
+        }, false); 
+        
+        mq.addListener(function(changed) {
+            if(changed.matches) {
+                document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
+            } else {
+                document.querySelectorAll('.nav-main')[0].style.height = null;
+            }
+        });
+    }
+
+    navHeight();
+
+document.addEventListener('DOMContentLoaded', function() {
+    navHeight();
+}, false);
+
 var timer;
 
 window.onresize = onResizeFunction;
@@ -60,6 +85,7 @@ function onResizeFunction() {
     clearTimeout(timer);
     timer = setTimeout(function() {
         sizeTest(true);
+        navHeight();
     }, 100);
 }
 
@@ -85,7 +111,7 @@ function reorderWidgets() {
     if (matching === false) {
         matching = true;
 
-        var widgets = document.querySelectorAll('.widget'),
+        var widgets = document.querySelectorAll('aside .widget'),
             widgetsLength = widgets.length,
             col1 = document.querySelectorAll('.sidebar--leftcol')[0],
             col2 = document.querySelectorAll('.sidebar--rightcol')[0],
@@ -110,7 +136,7 @@ function reorderWidgets() {
 function unorderWidgets() {
     if (matching === true) {
         matching = false;
-        var widgets = document.querySelectorAll('.widget'),
+        var widgets = document.querySelectorAll('aside .widget'),
             widgetsLength = widgets.length,
             sidebar = document.querySelectorAll('.content--sidebar')[0];
 
@@ -129,7 +155,7 @@ function unorderWidgets() {
 
 function dataAttributeAdd() {
 
-    var widgets = document.querySelectorAll('.widget'),
+    var widgets = document.querySelectorAll('aside .widget'),
         widgetsLength = widgets.length;
 
     for(var i = 0; i < widgetsLength; i++) {

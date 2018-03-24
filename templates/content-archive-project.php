@@ -1,3 +1,8 @@
+<?php 
+global $mtm_grid_row_class;
+
+$mtm_grid_row_class = mtm_output_row_number();
+?>
 <div class="mtm-component--main">
         <?php get_template_part( 'templates/page', 'header' ); ?>
         <?php mtm_terms_from_taxonomy_links( 'type' ); // output taxonomy ?>

@@ -1,6 +1,6 @@
 <article <?php post_class(); ?>>
     <?php if ( has_post_thumbnail() ) : ?>
-        <figure class="post--thumbnail single-project--img"><?php the_post_thumbnail( 'full' ) ?></figure>
+        <figure class="post--thumbnail single-project--img"><a href="<?php the_post_thumbnail_url( 'full' ); ?>"><?php the_post_thumbnail( 'large' ) ?></a></figure>
     <?php endif; ?>
     <div class="single-project--content">
         <header>

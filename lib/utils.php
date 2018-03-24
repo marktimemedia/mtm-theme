@@ -20,7 +20,7 @@ function is_element_empty( $element ) {
 */
 
 // get taxonomies terms links
-function mtm_custom_taxonomies_terms_links( $post ){
+function custom_taxonomies_terms_links( $post ){
   // get post by post id
   $post = get_post( $post->ID );
 

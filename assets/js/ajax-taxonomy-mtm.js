@@ -20,7 +20,7 @@
  
         $.get( mtm_vars.mtm_ajax_url, data, function(response) {
 
-            //console.log('taxonomy get');
+            // console.log('taxonomy get');
 
             // $targetContainer.html('<img class="loader" width="40" height="40" src="/wp-content/themes/mtm-pink-spring-theme/assets/img/spin.gif">');
  
@@ -36,7 +36,7 @@
                 })
                 calcImgsInRow();
 
-                //console.log('taxonomy response');
+                // console.log('taxonomy response');
             } 
 
                 $(pageImage + ' a').on( 'click', function(e) {
@@ -61,6 +61,7 @@
     function postAjax( selectedPost, $targetDiv, $thisImg ) {
         
         if($thisImg.hasClass('load-this')){
+            console.log('post click');
             $targetDiv.html('<img class="loader" width="40" height="40" src="/wp-content/themes/mtm-pink-spring-theme/assets/img/spin.gif">');
         
             // data and parameters to pass to the function
@@ -71,10 +72,14 @@
                 };
      
            $.get( mtm_vars.mtm_ajax_url, data, function(response) {
+
+            console.log('post get');
      
                 if( response ) {
                     // Display posts on page
                     $targetDiv.html( response );
+
+                    console.log('post response');
                 }
 
                 // Ajax taxonomy archive content in when clicking the small taxonomy links
